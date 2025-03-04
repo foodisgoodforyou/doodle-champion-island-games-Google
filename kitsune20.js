@@ -26451,7 +26451,7 @@ qq.prototype.tick = function () {
       var n = b.ha.Cc.ak.ha;
       if (0 != n.x) {
         var h = (1 + Math.abs(n.x)) / (1 + Math.sqrt(.5));
-        a.velocity.x = ch(-2.8 * h, a.velocity.x + n.x * h * 1.5, 2.8 * h)
+a.velocity.x = ch(-6.0 * h, a.velocity.x + n.x * h * 3.0, 6.0 * h);
       } else a.velocity.x *= .5;
       (16 < c.zY || m.Ca !== c.DY) && m.kb && m.ha && (c.mode = "grab_cooldown", A.lza.play(), c.d7 = 3, rq(b, g, "hold", ! 0), uq(g, m.Ca))
     } else "ground" == k.mode ? (m = g.ec.get(Dg), n = g.ec.get(bi), c = g.ec.get(M), c.velocity = B(0, 0), a = b.ha.Cc.ak.ha, 0 < C(a) ? (c.velocity = kg(a, 2), n.direction =
@@ -29594,8 +29594,8 @@ var St = function (b) {
       b.oc.KT = b.oc.z;
       m = c.unit(null).scale(5, null);
       90 < Math.abs(ih(g, b.kb.velocity)) && (m = m.scale(-1));
-      b.kb.velocity.x = m.x;
-      b.kb.velocity.y = m.y;
+b.kb.velocity.x = m.x * 2; // Double speed
+b.kb.velocity.y = m.y * 2;
       b.kb.pC = m.z
     }
   }, Rt = function (b, g) {
